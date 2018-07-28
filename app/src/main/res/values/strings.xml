@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Baking App</string>
+    <string name="title_activity_ingredients">IngredientsActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="emptyText">There is no data to display</string>
+    <string name="todo">TODO</string>
+    <string name="back">back</string>
+    <string name="ad_id_banner">ca-app-pub-9818427518235347/4102635737</string>
+</resources>

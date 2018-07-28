@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.m_Sallam.mahmoudmostafa.bakingapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_chef_cooking"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_chef_cooking"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.Splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.RecipesActivity"></activity>
+        <activity
+            android:name="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.IngredientsActivity"
+            android:label="@string/title_activity_ingredients"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.StepsActivity"
+            android:parentActivityName="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.RecipesActivity"></activity>
+        <activity
+            android:name="com.m_Sallam.mahmoudmostafa.bakingapp.Activities.StepVideoActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <receiver android:name="com.m_Sallam.mahmoudmostafa.bakingapp.widgets.RecipesWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/recipes_widget_info" />
+        </receiver>
+
+        <service
+            android:name="com.m_Sallam.mahmoudmostafa.bakingapp.widgets.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS">
+
+        </service>
+
+    </application>
+
+</manifest>
